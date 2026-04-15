@@ -41,3 +41,25 @@ class Model:
         
 m=Model("我的神经网络")
 m.show_info()
+
+
+#=============4/15/练习六：========
+# 题目：两数之和
+# 给一个数组 nums 和目标 target，返回两个数的下标，使它们相加等于 target。
+nums = [2,7,11,15]
+target = 9
+
+def sum_two(nums,target):
+    i=0
+    j=0
+    for i in range(len(nums)):
+        num_other=target-nums[i]
+        if num_other in nums:
+            j=nums.index(num_other)
+            if i!=j:
+                print("第一个数字的下标是：",i,"第二个数字的下标是：",j)
+                break
+            
+sum_two(nums,target)      
+        
+    
